@@ -161,11 +161,6 @@ body {
     width: 30%;
   }
 }
-@media only screen and (max-width: 768px) {
-  .header .menu-nav .menu-nav-box {
-    display: none;
-  }
-}
 .header .menu-nav .menu-nav-box .menu-nav-list {
   display: flex;
   gap: 44px;
@@ -177,8 +172,21 @@ body {
   color: #BED630;
 }
 @media only screen and (max-width: 768px) {
+  .header .menu-nav .menu-nav-box {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
   .header .menu-nav .icon-box {
     display: none;
+  }
+}
+.header .menu-nav .menu-mobile {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .header .menu-nav .menu-mobile {
+    display: block;
   }
 }
 .header .menu-nav .menu-mobile .dropdown-menu {

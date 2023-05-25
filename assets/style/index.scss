@@ -147,10 +147,7 @@ body{
             }
         }
         .menu-nav-box{
-            @media only screen and (max-width:768px) {
-                display: none;
-                
-            }
+            
             .menu-nav-list{
 
                 display: flex;
@@ -162,6 +159,10 @@ body{
                     color: $primary-color;
                 }
             }
+            @media only screen and (max-width:768px) {
+                display: none;
+                
+            }
         }
         .icon-box{
             @media only screen and (max-width:768px) {
@@ -170,6 +171,11 @@ body{
             }
         }
         .menu-mobile{
+            display: none;
+            @media only screen  and (max-width : 768px){
+                display: block;
+                
+            }
             .dropdown-menu{
                 position: absolute;
                 z-index: 2;
