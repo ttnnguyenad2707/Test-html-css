@@ -140,12 +140,26 @@ body {
   }
 }
 
+.header {
+  position: relative;
+}
 .header .menu-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   padding: 14px 0 30px;
+}
+@media only screen and (max-width: 768px) {
+  .header .menu-nav {
+    padding: 0;
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header .menu-nav .log {
+    width: 30%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .header .menu-nav .menu-nav-box {
@@ -161,6 +175,41 @@ body {
 }
 .header .menu-nav .menu-nav-box .menu-nav-list a:hover {
   color: #BED630;
+}
+@media only screen and (max-width: 768px) {
+  .header .menu-nav .icon-box {
+    display: none;
+  }
+}
+.header .menu-nav .menu-mobile .dropdown-menu {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  top: 58px;
+  background: #FFFFFF;
+  max-height: 0;
+  transform-origin: top;
+  transition: max-height 0.9s, transform 0.9s;
+}
+.header .menu-nav .menu-mobile .dropdown-menu .menu-nav-list {
+  display: flex;
+  flex-direction: column;
+}
+.header .menu-nav .menu-mobile .dropdown-menu .menu-nav-list .nav-text {
+  padding: 5px 16px;
+  color: #2A2A2A;
+  border-bottom: 1px solid #b4b2b2;
+}
+.header .menu-nav .menu-mobile .dropdown-menu.active {
+  max-height: 100vmax;
+  animation: hide-scroll 0.9s backwards;
+  transform: scaleY(1);
+}
+@keyframes hide-scroll {
+  0%, 100% {
+    overflow: hidden;
+  }
 }
 
 .banner {
