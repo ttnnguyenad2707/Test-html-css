@@ -285,6 +285,7 @@ body {
   display: flex;
   gap: 50px;
   margin: 40px 0 50px;
+  justify-content: center;
 }
 @media only screen and (max-width: 768px) {
   .collection .collection-list {
